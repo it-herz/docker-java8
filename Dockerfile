@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM ubuntu:xenial
 
 MAINTAINER Dmitrii Zolotov <dzolotov@herzen.spb.ru>
 
@@ -8,8 +8,8 @@ ENV PATH $PATH:$JAVA_HOME/bin
 ENV DEBIAN_FRONTEND noninteractive
 ENV JAVA_VERSION 8
 ENV JCE_VERSION 8
-ENV JAVA_UPDATE 77
-ENV JAVA_BUILD 03
+ENV JAVA_UPDATE 92
+ENV JAVA_BUILD 14
 
 RUN apt-get update && apt-get install -y curl unzip && \
     (curl -L -k -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/server-jre-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz | gunzip -c | tar x) \
