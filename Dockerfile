@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV JAVA_VERSION 8
 ENV JCE_VERSION 8
 ENV JAVA_UPDATE 92
-ENV JAVA_BUILD 14
+ENV JAVA_BUILD 34
 
 RUN apt-get update && apt-get install -y curl unzip && \
     (curl -L -k -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz | gunzip -c | tar x) \
